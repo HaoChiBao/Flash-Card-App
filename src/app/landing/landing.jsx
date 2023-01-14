@@ -1,4 +1,7 @@
 import React from "react";
+import './landing.css'
+import { Link } from "react-router-dom";
+
 
 function Landing() {
     return (
@@ -8,15 +11,20 @@ function Landing() {
                     <div className="title1"> Name</div>
                     <div className="description"> Transform your study sessions into a game by playing interactive flash cards
                         mini-games!</div>
-                    <div>
-                        <button className="sign-up">Sign Up</button>
-                    </div>
-                    <div>
-                        <button className="login">Login</button>
-                    </div>
+                    <Link to="/register">
+                        <div>
+                            <button className="sign-up">Sign Up</button>
+                        </div>
+                    </Link>
+
+                    <Link to="login">
+                        <div>
+                            <button className="login" >Login</button>
+                        </div>
+                    </Link>
                 </div>
                 <div>
-                    <img src="sign-up/img/bitmap/mainslayer.png" />
+                    <img src="mainslayer.png" />
                 </div>
             </div>
         </body>
