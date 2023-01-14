@@ -2,6 +2,7 @@ import './login.css';
 import {addDoc, collection} from 'firebase/firestore/lite';
 import {System} from '../../firebase/config';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import {Link} from 'react-router-dom';
 
 // add register with google account
 
@@ -14,8 +15,6 @@ function Login() {
 
       const button = document.getElementById('execute') 
       
-      const dbUsers = collection(system.db, 'users')
-      
       button.addEventListener('click', () => {
         // const username = document.getElementById('username').value
         const email = document.getElementById('email').value
@@ -23,15 +22,15 @@ function Login() {
         
         if (email != '' && password != '') {
           
-          signInWithEmailAndPassword(system.getAuth.auth, email, password).then((promise) => {
-            console.log(promise.user.uid, '- user reference')
-            console.log('auth accepted')
-            
-            localStorage.setItem('flash-card-uid', promise.user.uid)
-            // redirect to Home page from here
-          }) .catch((error) => {
-            console.log(error)
-          })
+            signInWithEmailAndPassword(system.getAuth.auth, email, password).then((promise) => {
+                console.log(promise.user.uid, '- user reference')
+                console.log('auth accepted')
+                
+                localStorage.setItem('flash-card-uid', promise.user.uid)
+                // redirect to Home page from here
+            }) .catch((error) => {
+                console.log(error)
+            })
         
         } else {
           document.getElementById('error-msg').innerHTML = 'Please fill all fields properly'

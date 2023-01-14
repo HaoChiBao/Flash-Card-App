@@ -4,6 +4,7 @@ import Register from './app/authentication/register';
 import Login from './app/authentication/login';
 import CreateFC from './app/dashboard/flashcard/createFC';
 import GroupFC from './app/dashboard/flashcard/groupFC';
+import Frenzy from './app/games/frenzy/frenzy';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -12,7 +13,8 @@ root.render(
     {/* <Register /> */}
     {/* <Login /> */}
     {/* <CreateFC /> */}
-    <GroupFC />
+    {/* <GroupFC /> */}
+    <Frenzy />
   </React.StrictMode>
 );
 
