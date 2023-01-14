@@ -1,5 +1,5 @@
 import './groupFC.css';
-import {doc, getDoc, updateDoc} from 'firebase/firestore/lite';
+import {doc, getDoc} from 'firebase/firestore/lite';
 import {System} from '../../../firebase/config';
 
 // add register with google account

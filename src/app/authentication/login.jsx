@@ -21,28 +21,37 @@ function Login() {
         // const username = document.getElementById('username').value
         const email = document.getElementById('email').value
         const password = document.getElementById('password').value
-
-        if (email != '' && password != '') {
-
-          signInWithEmailAndPassword(system.getAuth.auth, email, password).then((promise) => {
-            console.log(promise.user.uid, '- user reference')
-            console.log('auth accepted')
-
-            localStorage.setItem('flash-card-uid', promise.user.uid)
-        
-            navigate('/dashboard')
-
-            // will throw error if user is not found
-          }).catch((error) => {
-            console.log(error)
-          })
-
-        } else {
-          document.getElementById('error-msg').innerHTML = 'Please fill all fields properly'
-          console.log('Please fill all fields properly')
-        }
-
+        signIn(email, password)
       })
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const email = document.getElementById('email').value
+          const password = document.getElementById('password').value
+          signIn(email, password)
+        }
+      })
+    }
+  }
+
+  function signIn(email, password){
+    if (email != '' && password != '') {
+
+      signInWithEmailAndPassword(system.getAuth.auth, email, password).then((promise) => {
+        console.log(promise.user.uid, '- user reference')
+        console.log('auth accepted')
+
+        localStorage.setItem('flash-card-uid', promise.user.uid)
+    
+        navigate('/dashboard')
+
+        // will throw error if user is not found
+      }).catch((error) => {
+        console.log(error)
+      })
+
+    } else {
+      document.getElementById('error-msg').innerHTML = 'Please fill all fields properly'
+      console.log('Please fill all fields properly')
     }
   }
 
