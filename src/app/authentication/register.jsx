@@ -2,13 +2,15 @@
 import { setDoc, doc } from 'firebase/firestore/lite';
 import { System } from '../../firebase/config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import './login.css'
+import { useNavigate} from 'react-router-dom';
+import './register.css'
 
 // add register with google account
 
 let system = new System();
 let state = true
 function Register() {
+  const navigate = useNavigate()
   window.onload = function () {
     if (state) {
 
@@ -37,6 +39,7 @@ function Register() {
               localStorage.setItem('flash-card-uid', promise.user.uid)
 
               // redirect to Home page from here
+              navigate('/dashboard')
             })
 
           }).catch((error) => {
@@ -52,13 +55,28 @@ function Register() {
     }
   }
 
+  // return (
+  //   <div id="register">
+  //     <input type="text" id='username' placeholder='username'></input>
+  //     <input type="email" id='email' placeholder='email'></input>
+  //     <input type="password" id='password' placeholder='password'></input>
+  //     <button id='execute'>click</button>
+  //     <div id='error-msg'></div>
+  //   </div>
+  // );
   return (
-    <div id="register">
-      <input type="text" id='username' placeholder='username'></input>
-      <input type="email" id='email' placeholder='email'></input>
-      <input type="password" id='password' placeholder='password'></input>
-      <button id='execute'>click</button>
-      <div id='error-msg'></div>
+    <div className="bodyFr">
+      <div className="container1">
+        <div id="register">
+          <div className="title2">Elevate your Learning</div>
+          <div className="sub">Welcome Back, log in to continue.</div>
+          <input type="text" id = 'username' placeholder='username'></input>
+          <div><input type="email" id='email' placeholder='email'></input></div>
+          <div><input type="password" id='password' placeholder='password'></input></div>
+          <button id='execute'>Sign Up</button>
+          <div id='error-msg'></div>
+        </div>
+      </div>
     </div>
   );
 

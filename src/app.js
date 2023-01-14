@@ -16,9 +16,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/create" element={<CreateFC />} />
         <Route path="/groups" element={<GroupFC />} />
-<<<<<<<<< Temporary merge branch 1
-        <Route path="/dashboard" element={<Dashboard />} />
-=========
         <Route path="/frenzy" element={<Frenzy />} />
         <Route path="/dashboard" element={<Dashboard />} />
     </Routes>);
