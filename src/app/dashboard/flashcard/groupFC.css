@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.group-card{
+    border: 1px solid black;
+    height: 45vh;
+    aspect-ratio: 2/3;
+}
+
+.card{
+    border: 1px solid black;
+    height: 15vh;
+    aspect-ratio: 2/3;
+}
