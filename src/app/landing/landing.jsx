@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 
 function Landing() {
     return (
-        <body>
+        <div className="bodyFr">
             <div className="container">
                 <div className="text-section">
-                    <div className="title1"> Name</div>
+                    <div className="title1">Study Sprint</div>
                     <div className="description"> Transform your study sessions into a game by playing interactive flash cards
                         mini-games!</div>
                     <Link to="/register">
@@ -27,7 +27,7 @@ function Landing() {
                     <img src="mainslayer.png" />
                 </div>
             </div>
-        </body>
+        </div>
     );
 
 

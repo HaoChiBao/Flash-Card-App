@@ -42,10 +42,10 @@ function Login() {
   }
 
   return (
-    <body>
-      <div class="container">
+    <div className="bodyFr">
+      <div class="container1">
         <div id="login">
-          <div class="title1">Sign In</div>
+          <div class="title2">Sign In</div>
           <div class="sub">Welcome Back, log in to continue.</div>
           {/* <input type="text" id = 'username' placeholder='username'></input> */}
           <div>
@@ -55,7 +55,7 @@ function Login() {
           <div id='error-msg'></div>
         </div>
       </div>
-    </body>
+    </div>
   );
 
 }

@@ -1,9 +1,9 @@
-body {
+.bodyFr {
     background-color: #EBC8BB;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
 }
 
 .container {
@@ -28,6 +28,7 @@ body {
     margin-bottom: 3%;
     font-size: 50px;
     font-weight: 700;
+    color: #5B8F8E;
 }
 
 .description {
