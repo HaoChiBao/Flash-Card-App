@@ -1,5 +1,5 @@
 import './register.css';
-import {collection, setDoc, doc} from 'firebase/firestore/lite';
+import {setDoc, doc} from 'firebase/firestore/lite';
 import {System} from '../../firebase/config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
