@@ -9,7 +9,7 @@ function Landing() {
             <div className="container">
                 <div className="text-section">
                     <div className="title1">Study Sprint</div>
-                    <div className="description"> Transform your study sessions into a game by playing interactive flash cards
+                    <div className="description"> Level up your study sessions by playing interactive flash cards
                         mini-games!</div>
                     <Link to="/register">
                         <div>

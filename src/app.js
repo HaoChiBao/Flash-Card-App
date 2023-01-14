@@ -16,8 +16,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/create" element={<CreateFC />} />
         <Route path="/groups" element={<GroupFC />} />
-        <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/frenzy" element={<Frenzy />} />
+        <Route path="/dashboard" element={<Dashboard />} />
     </Routes>);
 }
 
