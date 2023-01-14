@@ -1,8 +1,12 @@
+import './frenzy.css'
+
 let totalPairs = 0
+let totalWrong = 0
 
 function onLoad(board, cards) {
-    let randomOrder = [];
 
+    let randomOrder = [];
+    console.log(cards.length * 2)
     for(let i = 0; i < cards.length; i++) {
         const card = cards[i]
 
@@ -44,20 +48,24 @@ function handleClick(e, card){
     console.log(card.id)
     if(prevCard == null) {
         prevCard = card;
-        card.style.backgroundColor = 'yellow'
+        card.style.backgroundColor = '#E7B563'
     } else {
-        if(prevCard.id == card.id) {
-            prevCard.style.backgroundColor = 'green';
-            card.style.backgroundColor = 'green';
+        if(prevCard.id == card.id && prevCard != card) {
+            prevCard.style.backgroundColor = '#5B8F8E';
+            card.style.backgroundColor = '#5B8F8E';
+
+            prevCard.style.pointerEvents = 'none';
+            card.style.pointerEvents = 'none';
 
             totalPairs--;
             prevCard = null;
         } else {
-            prevCard.style.backgroundColor = 'red';
-            card.style.backgroundColor = 'red';
+            totalWrong++;
+            prevCard.style.backgroundColor = '#F4B09C';
+            card.style.backgroundColor = '#F4B09C';
             setTimeout(() => {
-                prevCard.style.backgroundColor = 'transparent';
-                card.style.backgroundColor = 'transparent';
+                prevCard.style.backgroundColor = '#D9D9D9';
+                card.style.backgroundColor = '#D9D9D9';
 
                 prevCard = null;
             }, 1000);
@@ -70,8 +78,28 @@ function handleClick(e, card){
 }
 
 function gameStop(){
+    saveStats();
     clearInterval(timer.setLoop)
+
+    const button = document.getElementById('done');
+    button.style.opacity = '1';
+    button.style.pointerEvents = 'all';
+
     console.log('You win!')
+}
+
+function saveStats() {
+    const stats = {
+        totalPairs: totalPairs,
+        totalWrong: totalWrong,
+        time: {
+            min: timer.min,
+            sec: timer.sec,
+            ms: timer.ms,
+        }
+    }
+    console.log('stats saved')
+    localStorage.setItem('frenzy-stats', JSON.stringify(stats))
 }
 
 const timer = {
@@ -97,7 +125,7 @@ function addTimer(element){
           timer.total = 0;
         }
 
-        element.innerText = `${timer.min}:${timer.sec}:${timer.ms}`
+        // element.innerText = `${timer.min}:${timer.sec}:${timer.ms}`
         
       }, 150)
 }

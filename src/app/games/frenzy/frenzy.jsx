@@ -1,7 +1,7 @@
 import './frenzy.css';
 import {doc, getDoc, updateDoc} from 'firebase/firestore/lite';
 import {System} from '../../../firebase/config';
-
+import { useNavigate} from 'react-router-dom';
 import { onLoad, addTimer } from './logic';
 
 const system = new System();
@@ -10,6 +10,7 @@ let state = true
 
 let uid = localStorage.getItem('flash-card-uid')
 function Frenzy(){
+  const navigate = useNavigate()
   window.onload = function() {
     if (state) {
 
@@ -25,7 +26,12 @@ function Frenzy(){
       const data = doc.data()
       const flashcards = data.flashcards
       
-      console.log(flashcards[selectedGroup])
+      const button = document.getElementById('done')
+      button.addEventListener('click', () => {
+        button.style.opacity = '0'
+        button.style.pointerEvents = 'none'
+        navigate('/frenzystats')
+      })
 
       onLoad(game, flashcards[selectedGroup])
     
@@ -38,8 +44,10 @@ function Frenzy(){
 }
   return (
     <div id="frenzy">
+        <div className = 'title'>match the flashcards!</div>
         <div className="timer"></div>
         <div id = 'cards'></div>
+        <button id = 'done'>done</button>
     </div>
   );
 }
