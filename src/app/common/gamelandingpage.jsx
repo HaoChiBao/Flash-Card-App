@@ -1,6 +1,6 @@
 function GamePage(props) {
 
-    function handleClick(){ window.location.assign(props.route) }
+    function handleClick(){ window.location.assign('/frenzymid') }
 
     return (
         <div className="game" >

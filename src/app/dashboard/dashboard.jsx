@@ -4,12 +4,21 @@ import 'react-circular-progressbar/dist/styles.css';
 import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
 import Header from '../common/nav';
 import ProgressBar from '../common/projectbar';
-
-
+import {doc, getDoc, updateDoc} from 'firebase/firestore/lite';
+import {System} from '../../firebase/config';
 
 function Dashboard() {
+    let system = new System();
     window.addEventListener('load', () => {
+        let uid = localStorage.getItem('flash-card-uid')
         document.querySelector('.big2').addEventListener('click', () => { window.location.assign('/create') })
+        const ref = doc(system.db, 'users', uid)
+        const field = getDoc(ref).then((doc) => {
+            const data = doc.data()
+            const username = data.username
+            console.log(username)
+            document.querySelector('#welcome-title').innerHTML = `Welcome Back, ${username}`
+        })
     })
     const testData = [
         { bgcolor: "#5B8F8D", completed: 60 },
@@ -23,7 +32,7 @@ function Dashboard() {
                 <div className="left">
                     <div className="welcome-banner">
                         <div className="text">
-                            <div className="big1" id='welcome-title'>Welcome Back, cum</div>
+                            <div className="big1" id='welcome-title'>Welcome Back, </div>
                             <div className="big2">Let's get started →</div>
 
                         </div>

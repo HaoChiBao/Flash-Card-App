@@ -3,6 +3,16 @@
     padding: 0;
 }
 
+#background-fc{
+    height: 100vh;
+    width: 100vw;
+    background-color: #5B8F8E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #group-fc::-webkit-scrollbar{
     display: none;
 }
@@ -11,9 +21,12 @@
     width: 100%;
     top: 3vh;
     text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color:#5B8F8E;
 }
 #group-fc{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 70%;
     width: 70%;
     position: absolute;
@@ -23,7 +36,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 6rem;
+
     padding: 3rem;
+    padding-top: 5rem;
+
+    background-color: #D9D9D9;
 
     /* display: flex; */
     flex-direction: column;
@@ -40,7 +57,7 @@
 }
 
 .cardio{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 1.5rem;
     aspect-ratio: 1/1;
     margin: 1rem;
@@ -50,12 +67,14 @@
     /* position: absolute; */
     padding: 1rem;
 
+    background-color: #F4B09C;
+
 }
 
 .timbits{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 1rem;
     aspect-ratio: 1/1;
     margin: 0.5rem;
-
+    background-color: #EBC8BB;
 }

@@ -28,7 +28,10 @@ function GroupFC() {
             card.className = 'cardio'
             
             let content = document.createElement('div')
+            content.style.cursor = 'pointer'
             content.className = 'content'
+            content.addEventListener('mouseover', () => {content.style.transform = 'scale(1.1)'})
+            content.addEventListener('mouseout', () => {content.style.transform = 'scale(1)'})
             
                 card.addEventListener('click', () => {})
 
@@ -36,6 +39,7 @@ function GroupFC() {
                 title.style.textAlign = 'center'
                 title.style.width = '100%'
                 title.style.fontSize = '1rem'
+                title.style.fontWeight = 'bold'
                 title.innerHTML = group
 
                 card.style.position = 'relative'
@@ -59,8 +63,10 @@ function GroupFC() {
   }
 
   return (
-    <div id="group-fc">
-        <div id = 'title'>your flashcards!</div>
+    <div id="background-fc">
+      <div id="group-fc">
+          <div id = 'title'>your flashcards!</div>
+      </div>
     </div>
   );
 

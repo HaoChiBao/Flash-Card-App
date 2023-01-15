@@ -15,7 +15,7 @@ function Frenzy(){
     if (state) {
 
       // this will be dynamically set so the user can choose which group to study
-      const selectedGroup = 'CS'
+      const selectedGroup = localStorage.getItem('selectedGroup')
 
       const frenzy = document.getElementById('frenzy')
       const frenzyTimer = frenzy.querySelector('.timer')
