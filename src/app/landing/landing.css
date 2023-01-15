@@ -1,5 +1,5 @@
 .bodyFr {
-    background-image: url('/Users/judyzhou/Desktop/code braindump TT/Flash-Card-Game/public/sign-up/login first.png');
+    background-image: url('home.png');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -32,6 +32,7 @@
 .special1 {
     color: transparent;
     -webkit-text-stroke: 1px black;
+    text-decoration: underline 4px solid;
 
 }
 
