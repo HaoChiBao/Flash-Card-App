@@ -1,5 +1,7 @@
 function GamePage(props) {
 
+    function handleClick(){ window.location.assign(props.route) }
+
     return (
         <div className="game" >
 
@@ -7,7 +9,7 @@ function GamePage(props) {
             <div className="content">
                 <div className="game-title">{props.name}</div>
                 <div className="subtext">{props.description}</div>
-                <button to={props.route}>Play</button>
+                <button onClick={handleClick}>Play</button>
             </div>
         </div>
     )

@@ -45,6 +45,17 @@
     aspect-ratio: 1/1;
     margin: 1rem;
 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
     /* position: absolute; */
+    padding: 1rem;
+
+}
+
+.timbits{
+    border: 1px solid black;
+    border-radius: 1rem;
+    aspect-ratio: 1/1;
+    margin: 0.5rem;
 
 }

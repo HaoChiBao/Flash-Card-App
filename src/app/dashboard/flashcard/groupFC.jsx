@@ -28,8 +28,16 @@ function GroupFC() {
                 card.addEventListener('click', () => {})
                 card.addEventListener('hover', () => {})
 
-                allGroups.appendChild(card)
-            })
+                
+                for(let ams = 0 ; ams < flashcards[group].length; ams++){
+                    if (ams >= 4) break
+                    let inside = document.createElement('div')
+                    inside.className = 'timbits'
+                    
+                    card.appendChild(inside)
+                  }
+                  allGroups.appendChild(card)
+                })
         })
             
             

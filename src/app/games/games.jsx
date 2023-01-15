@@ -22,7 +22,7 @@ export default function Games() {
             <Header />
             <div className="okr">
 
-                <div className="gamer">
+                <div className="gamer" style={{paddingBottom: '6rem'}} >
 
                     {games}
 
