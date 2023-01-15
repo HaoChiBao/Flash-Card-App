@@ -1,12 +1,11 @@
-body {
+.rm {
     background-color: #BCCFC8;
-    height: 100%;
-    width: 100%;
 }
 
-#root {
+.okr {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .game {

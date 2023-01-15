@@ -18,13 +18,15 @@ export default function Games() {
 
     return (
 
-        <div>
+        <div className="rm">
             <Header />
+            <div className="okr">
 
-            <div className="gamer">
+                <div className="gamer">
 
-                {games}
+                    {games}
 
+                </div>
             </div>
         </div>
     )

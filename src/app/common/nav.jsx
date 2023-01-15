@@ -5,9 +5,11 @@ function Header() {
     window.addEventListener('load', () => {
         const home = document.getElementById('home')
         const flashcards = document.getElementById('flashcards')
+        const games = document.getElementById('games')
 
-        home.addEventListener('click', () => {window.location.assign('/dashboard')})
-        flashcards.addEventListener('click', () => {window.location.assign('/groups')})
+        home.addEventListener('click', () => { window.location.assign('/dashboard') })
+        flashcards.addEventListener('click', () => { window.location.assign('/groups') })
+        games.addEventListener('click', () => { window.location.assign('/games') })
     })
     return (
         <header>
@@ -28,8 +30,8 @@ function Header() {
                             Flashcards
                         </li>
 
-                        <li>
-                            <Link to="/" style={{ textDecoration: 'none' }}> Games</Link>
+                        <li id='games'>
+                            Games
                         </li>
 
                     </ul>
