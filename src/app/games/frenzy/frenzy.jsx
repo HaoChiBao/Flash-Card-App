@@ -10,7 +10,7 @@ let state = true
 
 let uid = localStorage.getItem('flash-card-uid')
 function Frenzy(){
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   window.onload = function() {
     if (state) {
 
@@ -30,7 +30,8 @@ function Frenzy(){
       button.addEventListener('click', () => {
         button.style.opacity = '0'
         button.style.pointerEvents = 'none'
-        navigate('/frenzystats')
+        // navigate('/frenzystats')
+        window.location.assign('/frenzystats')
       })
 
       onLoad(game, flashcards[selectedGroup])

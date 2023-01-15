@@ -10,7 +10,7 @@ let state = true
 
 // loging function
 function Login() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   window.onload = function () {
     if (state) {
@@ -42,7 +42,8 @@ function Login() {
 
         localStorage.setItem('flash-card-uid', promise.user.uid)
     
-        navigate('/dashboard')
+        // navigate('/dashboard')
+        window.location.assign('/dashboard')
 
         // will throw error if user is not found
       }).catch((error) => {
