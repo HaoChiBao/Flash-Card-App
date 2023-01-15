@@ -17,6 +17,7 @@
 }
 
 .texty {
+    width: 50%;
     padding: 5% 0 5% 5%;
 }
 
@@ -37,6 +38,7 @@
 .doomed {
     font-style: italic;
     font-weight: 500;
+    width: 70%;
     font-size: 30px;
     line-height: 36px;
     color: white;
