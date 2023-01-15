@@ -1,7 +1,7 @@
 import './login.css';
 import { System } from '../../firebase/config';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // add register with google account
 
@@ -14,7 +14,7 @@ function Login() {
 
   window.onload = function () {
     if (state) {
-      
+
       const button = document.getElementById('execute')
 
       button.addEventListener('click', () => {
@@ -33,7 +33,7 @@ function Login() {
     }
   }
 
-  function signIn(email, password){
+  function signIn(email, password) {
     if (email != '' && password != '') {
 
       signInWithEmailAndPassword(system.getAuth.auth, email, password).then((promise) => {
@@ -41,7 +41,7 @@ function Login() {
         console.log('auth accepted')
 
         localStorage.setItem('flash-card-uid', promise.user.uid)
-    
+
         // navigate('/dashboard')
         window.location.assign('/dashboard')
 
@@ -67,6 +67,8 @@ function Login() {
             <input type="email" id='email' placeholder='email'></input></div>
           <div><input type="password" id='password' placeholder='password'></input></div>
           <div><button className="login" id='execute'>Login</button></div>
+          {/* anchor here */}
+          <div>Don't have an account, <a id="mainslay">sign up here. </a></div>
           <div id='error-msg'></div>
         </div>
       </div>

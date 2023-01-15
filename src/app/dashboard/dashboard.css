@@ -53,15 +53,15 @@
     color: #FFFFFF;
 }
 
-.big2:hover{
+.big2:hover {
     text-decoration: underline;
     cursor: pointer;
 }
 
-a {
+/* a {
     text-decoration: none;
     color: #FFFFFF;
-}
+} */
 
 .jump {
     margin: 3%;
