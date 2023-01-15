@@ -23,6 +23,8 @@ function CreateFC() {
                 const front = document.querySelector('#card-front textarea').value
                 const back = document.querySelector('#card-behind textarea').value
 
+                const impromptu = document.getElementById('impromptu')
+
                 const group = document.getElementById('card-group').value
                 const card = { front: front, back: back }
 
@@ -41,6 +43,10 @@ function CreateFC() {
                     updateDoc(ref, {
                         flashcards
                     }).then(() => {
+                        impromptu.style.opacity = '1'
+                        setTimeout(() => {
+                            impromptu.style.opacity = '0'
+                        }, 1000)
                         console.log('success - added in db')
                     }).catch((error) => {
                         console.log(error)
@@ -62,6 +68,7 @@ function CreateFC() {
                     <div className='dumb'>
                         <input className='sleepingJames' type="text" placeholder='create a folder' id="card-group" />
                         <div className='dawg'>
+                            <div id = 'impromptu'>card successfully created</div>
                             <div className='card' id='card-front'>
                                 <textarea className="sad" type="text" placeholder='front card'/>
                             </div>
