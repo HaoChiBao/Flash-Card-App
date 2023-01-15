@@ -67,7 +67,9 @@ function Register() {
         console.log(error)
       })
     } else {
-      document.getElementById('error-msg').innerHTML = 'Please fill all fields properly'
+      const error = document.getElementById('error-msg')
+      error.style.color = 'red'
+      error.innerHTML = '*Please fill all fields properly'
       console.log('Please fill all fields properly')
     }
   }
