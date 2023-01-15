@@ -49,10 +49,12 @@ function Login() {
         // will throw error if user is not found
       }).catch((error) => {
         console.log(error)
+        document.getElementById('error-msg').innerHTML = '*Incorrect email or password'
+      console.log('Please fill all fields properly')
       })
 
     } else {
-      document.getElementById('error-msg').innerHTML = 'Please fill all fields properly'
+      document.getElementById('error-msg').innerHTML = '*Please fill all fields properly'
       console.log('Please fill all fields properly')
     }
   }

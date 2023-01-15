@@ -19,6 +19,10 @@
     align-items: center;
 }
 
+#error-msg{
+    color:red;
+}
+
 .title2 {
     margin-bottom: 13%;
     font-size: 40px;

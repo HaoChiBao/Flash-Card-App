@@ -18,7 +18,16 @@ function Dashboard() {
             const username = data.username
             console.log(username)
             document.querySelector('#welcome-title').innerHTML = `Welcome Back, ${username}`
+
+            const flashcards = data.flashcards
+            // console.log(flashcards)
+            for(let ams = 0; ams < Object.keys(flashcards).length; ams++){
+                if(ams>=2) break
+                const jump = document.getElementById(`jump${ams}`)
+                jump.innerHTML = Object.keys(flashcards)[ams]
+            }
         })
+
     })
     const testData = [
         { bgcolor: "#5B8F8D", completed: 60 },
@@ -41,6 +50,10 @@ function Dashboard() {
                         <div className='jump'>Jump Back Into</div>
                         {/* need a carasoul here!!!! */}
                         <div></div>
+                    </div>
+                    <div className="groupies">
+                        <div className='jump' id = 'jump0'>0</div>
+                        <div className='jump' id = 'jump1'>1</div>
                     </div>
                 </div>
                 <div className="right">

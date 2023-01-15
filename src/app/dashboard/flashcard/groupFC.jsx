@@ -15,7 +15,8 @@ function GroupFC() {
       
         const allGroups = document.getElementById('group-fc')
 
-        
+        document.getElementById('back').addEventListener('click', () => {window.location.assign('/dashboard')})
+
         
         const ref = doc(system.db, 'users', uid)
         const field = getDoc(ref).then((doc) => {
@@ -64,6 +65,7 @@ function GroupFC() {
 
   return (
     <div id="background-fc">
+      <button id = 'back' >back</button>
       <div id="group-fc">
           <div id = 'title'>your flashcards!</div>
       </div>
