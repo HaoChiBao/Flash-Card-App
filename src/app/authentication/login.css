@@ -26,6 +26,11 @@
     color: #5B8F8E;
 }
 
+#mainslay:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 button {
     margin-top: 3%;
     width: 100%;

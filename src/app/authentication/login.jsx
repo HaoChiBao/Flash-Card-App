@@ -16,6 +16,7 @@ function Login() {
     if (state) {
 
       const button = document.getElementById('execute')
+      document.getElementById('mainslay').addEventListener('click', () => {window.location.assign('/register')})
 
       button.addEventListener('click', () => {
         // const username = document.getElementById('username').value
