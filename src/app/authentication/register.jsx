@@ -47,6 +47,10 @@ function Register() {
           email: email,
           flashcards: {
             // title: [cards]
+          },
+          frenzy: {
+            highscore: 0,
+            streak: 0,
           }
         }).then(() => {
           console.log('success - added in db')

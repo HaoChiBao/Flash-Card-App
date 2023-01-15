@@ -8,9 +8,9 @@ import ProgressBar from '../common/projectbar';
 
 
 function Dashboard() {
-    window.onload = function () {
+    window.addEventListener('load', () => {
         document.querySelector('.big2').addEventListener('click', () => { window.location.assign('/create') })
-    }
+    })
     const testData = [
         { bgcolor: "#5B8F8D", completed: 60 },
     ];

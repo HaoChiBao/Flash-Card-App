@@ -3,14 +3,48 @@
     padding: 0;
 }
 
-.group-card{
+#group-fc::-webkit-scrollbar{
+    display: none;
+}
+#group-fc #title{
+    position: absolute;
+    width: 100%;
+    top: 3vh;
+    text-align: center;
+}
+#group-fc{
     border: 1px solid black;
-    height: 45vh;
-    aspect-ratio: 2/3;
+    height: 70%;
+    width: 70%;
+    position: absolute;
+    overflow: scroll;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6rem;
+    padding: 3rem;
+
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 30%);
+    /* grid-auto-rows: 8px; */
+    /* overflow: none;
+    justify-content: center;
+    align-items: center; */
 }
 
-.card{
+.cardio{
     border: 1px solid black;
-    height: 15vh;
-    aspect-ratio: 2/3;
+    border-radius: 1.5rem;
+    aspect-ratio: 1/1;
+    margin: 1rem;
+
+    /* position: absolute; */
+
 }

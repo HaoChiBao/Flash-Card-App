@@ -22,30 +22,14 @@ function GroupFC() {
             // const cards = Object.keys(flashcards)
 
             Object.keys(flashcards).forEach((group) => {
-                const groupCards = document.createElement('div')
-                groupCards.className = 'group-card'
-                groupCards.id = group
-                
-                const cards = flashcards[group]
-                for(let ams = 0; ams < cards.length; ams++) {
-                    const cardDiv = document.createElement('div')
-                    cardDiv.className = 'card'
-                    cardDiv.id = `${group}-card${ams}`
-                    
-                    groupCards.appendChild(cardDiv)
-                }
+                let card = document.createElement('div')
+                card.className = 'cardio'
 
-                allGroups.appendChild(groupCards)
+                card.addEventListener('click', () => {})
+                card.addEventListener('hover', () => {})
 
-            })            
-
-        // updateDoc(ref, {
-        //     flashcards
-        // }).then(() => {
-        //     console.log('success - added in db')
-        // }).catch((error) => {
-        //     console.log(error)
-        // })
+                allGroups.appendChild(card)
+            })
         })
             
             
@@ -54,7 +38,7 @@ function GroupFC() {
 
   return (
     <div id="group-fc">
-        
+        <div id = 'title'>your flashcards!</div>
     </div>
   );
 

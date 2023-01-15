@@ -22,10 +22,12 @@
 
 .nav-items>li:hover {
     font-style: italic;
+    cursor: pointer;
 }
 
 .nav-items>li {
-    color: #542484;
+    /* color: #542484; */
+    color: #D9D9D9;
     padding: 0px 20px 0px 20px;
 }
 

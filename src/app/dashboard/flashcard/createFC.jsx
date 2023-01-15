@@ -11,9 +11,9 @@ let state = true
 let uid = localStorage.getItem('flash-card-uid')
 
 function CreateFC() {
-    window.onload = function () {
+    // window.onload = function () {
+    window.addEventListener('load', () => {
         if (state) {
-
             const button = document.getElementById('execute')
 
             const ref = doc(system.db, 'users', uid)
@@ -48,7 +48,7 @@ function CreateFC() {
                 })
             })
         }
-    }
+    })
 
     return (
         <div id="create-fc">
@@ -63,10 +63,10 @@ function CreateFC() {
                         <input className='sleepingJames' type="text" placeholder='create a folder' id="card-group" />
                         <div className='dawg'>
                             <div className='card' id='card-front'>
-                                <textarea className="sad" type="text" />
+                                <textarea className="sad" type="text" placeholder='front card'/>
                             </div>
                             <div className='card' id='card-behind'>
-                                <textarea className="sad" type="text" />
+                                <textarea className="sad" type="text" placeholder='back card' />
                             </div>
                         </div>
                         <button className="pov" id='execute'>create!</button>
