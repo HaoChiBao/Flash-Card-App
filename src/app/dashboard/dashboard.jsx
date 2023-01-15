@@ -8,7 +8,9 @@ import ProgressBar from '../common/projectbar';
 
 
 function Dashboard() {
-
+    window.onload = function () {
+        document.querySelector('.big2').addEventListener('click', () => { window.location.assign('/create') })
+    }
     const testData = [
         { bgcolor: "#5B8F8D", completed: 60 },
     ];
@@ -22,8 +24,7 @@ function Dashboard() {
                     <div className="welcome-banner">
                         <div className="text">
                             <div className="big1" id='welcome-title'>Welcome Back, cum</div>
-                            <div className="big2">Let's get started <a href="">→</a>
-                            </div>
+                            <div className="big2">Let's get started →</div>
 
                         </div>
                     </div>

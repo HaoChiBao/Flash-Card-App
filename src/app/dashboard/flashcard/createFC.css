@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#create-fc{
+/* #create-fc {
     width: 100vw;
     height: 100vh;
 
@@ -11,10 +11,65 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+} */
+
+
+.dawg {
+    display: flex;
 }
 
-.card{
-    border: 1px solid black;
-    height: 15vh;
-    aspect-ratio: 2/3;
+.onelastchance {
+    margin-top: 5%;
+    border-radius: 40px;
+    height: 80%;
+    background: #D9D9D9;
+    display: flex;
+    box-shadow: 0px 0px 200px rgba(0, 0, 0, 0.25);
+    border-radius: 70px;
+}
+
+.boo {
+    padding: 30px;
+}
+
+.cum {
+    font-family: 'Inter';
+    width: 100vw;
+    width: 75%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    color: #5B8F8E;
+}
+
+.dumb {
+    margin-top: 3%;
+    margin-right: 3%;
+}
+
+
+.soSilly {
+    width: 500px;
+    height: 500px;
+}
+
+.sleepingJames {
+    background: #E7B563;
+    border-radius: 52px;
+    height: 25px;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+
+.sleepingJames::placeholder {
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+
+.pov {
+    background-color: #E7B563;
+    color: black;
+    width: 100%;
 }

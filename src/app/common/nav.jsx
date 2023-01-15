@@ -12,7 +12,7 @@ function Header() {
 
                     <ul className='nav-items'>
                         <li>
-                            <Link to="/" style={{ textDecoration: 'none' }}>Home</Link>
+                            <Link to="/Dashboard" style={{ textDecoration: 'none' }}>Home</Link>
                         </li>
 
                         <li>
