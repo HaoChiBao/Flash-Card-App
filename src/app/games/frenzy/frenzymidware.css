@@ -5,30 +5,49 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #5b8f8e;
 }
 
 #frenzymid #title{
-    padding: 2rem;
+    padding: 3rem;
+    color: #E7B563;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
+#frenzymid .frenzy-card:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
 #frenzymid .frenzy-card{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 80%;
-    aspect-ratio: 3/2;
+    aspect-ratio: 1/1;
     border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color:#BCCFC8;
+    background-color:#F4B09C;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
+#frenzymid #groups::-webkit-scrollbar{
+    display: none;
+}
 #frenzymid #groups{
-    width: 80%;
-    height: 80%;
-    padding: 2rem;
+    width: 70%;
+    height: 70%;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fill, 30%);
     /* grid-auto-rows: 8px; */
-    overflow: none;
+    overflow: scroll;
     justify-content: center;
     align-items: center;
+
+    background-color: #d9d9d9;
+    border-radius: 6rem;
 }

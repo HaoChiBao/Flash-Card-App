@@ -41,7 +41,7 @@ function FrenzyMid(){
 }
   return (
     <div id="frenzymid">
-        <div id = 'title'>Choose a group to study</div>
+        <div id = 'title'>choose a topic to study</div>
         <div id = 'groups'></div>
     </div>
   );
