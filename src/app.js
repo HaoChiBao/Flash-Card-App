@@ -7,6 +7,7 @@ import Frenzystats from './app/games/frenzy/frenzystats';
 import { Route, Routes } from 'react-router-dom';
 import Landing from './app/landing/landing';
 import Dashboard from './app/dashboard/dashboard';
+import Games from './app/games/games.jsx';
 
 import './app/app.css'
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/frenzy" element={<Frenzy />} />
         <Route path="/frenzystats" element={<Frenzystats />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/games" element={<Games />} />
     </Routes>);
 }
 

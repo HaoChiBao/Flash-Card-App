@@ -28,6 +28,10 @@ function Header() {
                             Flashcards
                         </li>
 
+                        <li>
+                            <Link to="/" style={{ textDecoration: 'none' }}> Games</Link>
+                        </li>
+
                     </ul>
                 </div>
             </nav >

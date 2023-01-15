@@ -22,18 +22,17 @@ function Landing() {
             <div className="container">
                 <div className="text-section">
                     <div className="title1">Study Sprint</div>
-                    <div className="description"> Level up your study sessions by playing interactive flash cards
-                        mini-games!</div>
+                    <div className="description"> Elevate your learning with active recall and mini-games</div>
                     {/* <Link to="/register"> */}
-                        <div>
-                            <button className="sign-up" >Sign Up</button>
-                        </div>
+                    <div>
+                        <button className="sign-up" >Sign Up</button>
+                    </div>
                     {/* </Link> */}
 
                     {/* <Link to="login"> */}
-                        <div>
-                            <button className="login" >Login</button>
-                        </div>
+                    <div>
+                        <button className="login" >Login</button>
+                    </div>
                     {/* </Link> */}
                 </div>
                 <div>

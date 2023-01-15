@@ -1,0 +1,44 @@
+body {
+    background-color: #BCCFC8;
+    height: 100%;
+    width: 100%;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.game {
+    margin: 20px;
+    width: 100vh;
+    height: 30%;
+    background-color: #E7B563;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.25);
+    display: flex;
+    border-radius: 66px;
+    padding: 30px;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 3px 0 3px;
+}
+
+.game-img {
+    margin: 0;
+    width: 50vh;
+}
+
+.subtext {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.game-title {
+    font-weight: 700;
+    font-size: 60px;
+}
