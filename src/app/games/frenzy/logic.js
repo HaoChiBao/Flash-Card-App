@@ -1,12 +1,14 @@
 import './frenzy.css'
 
+let cardAmount = 0
 let totalPairs = 0
 let totalWrong = 0
 
 function onLoad(board, cards) {
 
     let randomOrder = [];
-    console.log(cards.length * 2)
+    // console.log(cards.length * 2)
+    cardAmount = cards.length * 2;
     for(let i = 0; i < cards.length; i++) {
         const card = cards[i]
 
@@ -90,6 +92,7 @@ function gameStop(){
 
 function saveStats() {
     const stats = {
+        cardAmount: cardAmount,
         totalPairs: totalPairs,
         totalWrong: totalWrong,
         time: {

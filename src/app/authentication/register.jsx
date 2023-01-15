@@ -10,7 +10,7 @@ import './register.css'
 let system = new System();
 let state = true
 function Register() {
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
   window.onload = function () {
     if (state) {
 
@@ -55,7 +55,8 @@ function Register() {
           localStorage.setItem('flash-card-uid', promise.user.uid)
   
           // redirect to Home page from here
-          navigate('/dashboard')
+          // navigate('/dashboard')
+          window.location.assign('/dashboard')
         })
   
       }).catch((error) => {

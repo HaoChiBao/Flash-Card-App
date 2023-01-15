@@ -4,6 +4,19 @@ import { Link } from "react-router-dom";
 
 
 function Landing() {
+    window.onload = function () {
+        const signUp = document.querySelector('.sign-up');
+        const login = document.querySelector('.login');
+
+        signUp.addEventListener('click', () => {
+            window.location.assign('/register');
+        })
+
+        login.addEventListener('click', () => {
+            window.location.assign('/login');
+        })
+    }
+
     return (
         <div className="bodyFr">
             <div className="container">
@@ -11,17 +24,17 @@ function Landing() {
                     <div className="title1">Study Sprint</div>
                     <div className="description"> Level up your study sessions by playing interactive flash cards
                         mini-games!</div>
-                    <Link to="/register">
+                    {/* <Link to="/register"> */}
                         <div>
-                            <button className="sign-up">Sign Up</button>
+                            <button className="sign-up" >Sign Up</button>
                         </div>
-                    </Link>
+                    {/* </Link> */}
 
-                    <Link to="login">
+                    {/* <Link to="login"> */}
                         <div>
                             <button className="login" >Login</button>
                         </div>
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div>
                     <img src="mainslayer.png" />
